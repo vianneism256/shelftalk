@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Shelf Talk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-200">
+    <div class="bg-yellow-500 p-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-black">SHELF TALK</div>
+        <nav class="space-x-4 text-black font-semibold">
+            <a href="home.html" class="hover:underline">HOME</a>
+            <a href="books.html" class="hover:underline">BOOKS</a>
+            <a href="reviews.html" class="hover:underline">REVIEWS</a>
+            <a href="genres.html" class="hover:underline">GENRES</a>
+            <a href="authors.html" class="hover:underline">AUTHORS</a>
+        </nav>
+    </div>
+
+    <div class="flex">
+        <!-- Left Advertisement -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="https://placehold.co/200x400" alt="Advertisement banner with clouds and a green field" class="w-full">
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-3/5 p-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="font-semibold text-lg mb-2">Books</h2>
+
+                <!-- Search and Filter Section -->
+                <div class="flex justify-between items-center mb-4">
+                    <input type="text" placeholder="Search for books..." class="border p-2 rounded w-1/2">
+                    <div class="space-x-2">
+                        <select class="border p-2 rounded">
+                            <option value="popularity">Sort by Popularity</option>
+                            <option value="new-arrivals">New Arrivals</option>
+                            <option value="rating">Sort by Rating</option>
+                            <option value="alphabetical">Alphabetical Order</option>
+                        </select>
+                        <select class="border p-2 rounded">
+                            <option value="all">All Categories</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="science-fiction">Science Fiction</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Book List -->
+                <ul>
+                    <!-- Example Book 1 -->
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">1. <em>The Great Gatsby</em> by F. Scott Fitzgerald</h3>
+                                <p>Ranking: 4.8 | Popularity Score: 98</p>
+                                <span class="text-green-600 font-bold">New Arrival</span>
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for 'The Great Gatsby'" class="w-20 h-32">
+                        </div>
+                    </li>
+                    <!-- Example Book 2 -->
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">2. <em>1984</em> by George Orwell</h3>
+                                <p>Ranking: 4.7 | Popularity Score: 95</p>
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for '1984'" class="w-20 h-32">
+                        </div>
+                    </li>
+                    <!-- Example Book 3 -->
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">3. <em>To Kill a Mockingbird</em> by Harper Lee</h3>
+                                <p>Ranking: 4.9 | Popularity Score: 99</p>
+                                <span class="text-green-600 font-bold">New Arrival</span>
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for 'To Kill a Mockingbird'" class="w-20 h-32">
+                        </div>
+                    </li>
+                    <!-- Example Book 4 -->
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">4. <em>Pride and Prejudice</em> by Jane Austen</h3>
+                                <p>Ranking: 4.5 | Popularity Score: 89</p>
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for 'Pride and Prejudice'" class="w-20 h-32">
+                        </div>
+                    </li>
+                    <!-- Example Book 5 -->
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">5. <em>The Catcher in the Rye</em> by J.D. Salinger</h3>
+                                <p>Ranking: 4.2 | Popularity Score: 87</p>
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for 'The Catcher in the Rye'" class="w-20 h-32">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Advertisement and Friends List -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="https://placehold.co/200x100" alt="Advertisement banner with sky and hills" class="w-full mb-4">
+            <div class="text-center font-semibold mb-2">Friends</div>
+            <ul class="list-none text-center">
+                <li>Kiara Lohan Ella</li>
+                <li>Janel Laynes</li>
+                <li>Gabriel Ibo</li>
+                <li>Vianne Navida</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

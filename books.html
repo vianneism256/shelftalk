@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Shelf Talk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        // Array of book data
+        const books = [
+            { title: "The Great Gatsby", author: "F. Scott Fitzgerald", ranking: 4.8, popularity: 98, newArrival: true, category: "Fiction" },
+            { title: "1984", author: "George Orwell", ranking: 4.7, popularity: 95, newArrival: false, category: "Science Fiction" },
+            { title: "To Kill a Mockingbird", author: "Harper Lee", ranking: 4.9, popularity: 99, newArrival: true, category: "Fiction" },
+            { title: "Pride and Prejudice", author: "Jane Austen", ranking: 4.5, popularity: 89, newArrival: false, category: "Fiction" },
+            { title: "The Catcher in the Rye", author: "J.D. Salinger", ranking: 4.2, popularity: 87, newArrival: false, category: "Fiction" },
+        ];
+
+        // Function to display books based on filters
+        function displayBooks(filteredBooks) {
+            const bookList = document.getElementById("bookList");
+            bookList.innerHTML = ""; // Clear previous list
+
+            filteredBooks.forEach(book => {
+                const bookItem = `
+                    <li class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-semibold">${book.title} by ${book.author}</h3>
+                                <p>Ranking: ${book.ranking} | Popularity Score: ${book.popularity}</p>
+                                ${book.newArrival ? '<span class="text-green-600 font-bold">New Arrival</span>' : ''}
+                            </div>
+                            <img src="https://placehold.co/100x150" alt="Book cover for '${book.title}'" class="w-20 h-32">
+                        </div>
+                    </li>
+                `;
+                bookList.innerHTML += bookItem;
+            });
+        }
+
+        // Initial display
+        window.onload = () => {
+            displayBooks(books);
+        };
+
+        // Filter and sort books based on the selected criteria
+        function applyFilters() {
+            const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            const sortOption = document.getElementById("sortOption").value;
+            const categoryOption = document.getElementById("categoryOption").value;
+
+            let filteredBooks = books.filter(book => 
+                book.title.toLowerCase().includes(searchQuery) || 
+                book.author.toLowerCase().includes(searchQuery)
+            );
+
+            if (categoryOption !== "all") {
+                filteredBooks = filteredBooks.filter(book => book.category.toLowerCase() === categoryOption.toLowerCase());
+            }
+
+            switch (sortOption) {
+                case "popularity":
+                    filteredBooks.sort((a, b) => b.popularity - a.popularity);
+                    break;
+                case "new-arrivals":
+                    filteredBooks = filteredBooks.filter(book => book.newArrival);
+                    break;
+                case "rating":
+                    filteredBooks.sort((a, b) => b.ranking - a.ranking);
+                    break;
+                case "alphabetical":
+                    filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+            }
+
+            displayBooks(filteredBooks);
+        }
+    </script>
+</head>
+<body class="bg-gray-200">
+    <div class="bg-yellow-500 p-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-black">SHELF TALK</div>
+        <nav class="space-x-4 text-black font-semibold">
+            <a href="home page.html" class="hover:underline">HOME</a>
+            <a href="books.html" class="hover:underline">BOOKS</a>
+            <a href="reviews.html" class="hover:underline">REVIEWS</a>
+            <a href="genres.html" class="hover:underline">GENRES</a>
+            <a href="authors.html" class="hover:underline">AUTHORS</a>
+        </nav>
+        <div class="space-x-4">
+            <a href="#" class="bg-white px-4 py-2 rounded-lg hover:bg-gray-100">CONTACT</a>
+            <a href="#" class="bg-white px-4 py-2 rounded-lg hover:bg-gray-100">ABOUT US</a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <!-- Left Advertisement -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="mmcad.png" alt="Advertisement banner with clouds and a green field" class="w-full">
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-3/5 p-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="font-semibold text-lg mb-2">Books</h2>
+
+                <!-- Search and Filter Section -->
+                <div class="flex justify-between items-center mb-4">
+                    <input type="text" id="searchInput" placeholder="Search for books..." class="border p-2 rounded w-1/2" onkeyup="applyFilters()">
+                    <div class="space-x-2">
+                        <select id="sortOption" class="border p-2 rounded" onchange="applyFilters()">
+                            <option value="popularity">Sort by Popularity</option>
+                            <option value="new-arrivals">New Arrivals</option>
+                            <option value="rating">Sort by Rating</option>
+                            <option value="alphabetical">Alphabetical Order</option>
+                        </select>
+                        <select id="categoryOption" class="border p-2 rounded" onchange="applyFilters()">
+                            <option value="all">All Categories</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="science-fiction">Science Fiction</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Book List -->
+                <ul id="bookList"></ul>
+            </div>
+        </div>
+
+        <!-- Right Advertisement and Friends List -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="ayalaad.jpg" alt="Advertisement banner with sky and hills" class="w-full mb-4">
+            <div class="text-center font-semibold mb-2">Friends</div>
+            <ul class="list-none text-center">
+                <li>Kiara Lohan Ella</li>
+                <li>Janel Laynes</li>
+                <li>Gabriel Ibo</li>
+                <li>Vianne Navida</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

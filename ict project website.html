@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            color: white;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main h1 {
+            margin-bottom: 1rem;
+        }
+
+        .buttons {
+            margin: 2rem 0;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            display: inline-block;
+        }
+
+        .buttons a.facebook {
+            background-color: #3b5998;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+            }
+
+            .buttons a {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#">HOME</a>
+                <a href="#">BOOKS</a>
+                <a href="#">REVIEWS</a>
+                <a href="#">GENRES</a>
+                <a href="#">AUTHORS</a>
+                <a href="#">COMMUNITY</a>
+                <a href="#">MY LIBRARY</a>
+            </div>
+            <div>
+                <a href="#">CONTACT</a>
+                <a href="#">ABOUT US</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your next pageturner awaits.</h1>
+        
+        <div class="buttons">
+            <a href="#" class="google">Continue with Google</a>
+            <a href="#" class="facebook">Continue with Facebook</a>
+            <a href="#">Sign up with Email</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Presented by: ELLA, NAVIDA, LAYNES, ORANTE, </p>
+    </footer>
+</body>
+</html>

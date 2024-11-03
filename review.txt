@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Shelf Talk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-200">
+    <div class="bg-yellow-500 p-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-black">SHELF TALK</div>
+        <nav class="space-x-4 text-black font-semibold">
+            <a href="home page.html" class="hover:underline">HOME</a>
+            <a href="books.html" class="hover:underline">BOOKS</a>
+            <a href="reviews.html" class="hover:underline">REVIEWS</a>
+            <a href="genres.html" class="hover:underline">GENRES</a>
+            <a href="authors.html" class="hover:underline">AUTHORS</a>
+        </nav>
+    </div>
+
+    <div class="flex">
+        <!-- Left Advertisement -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="https://placehold.co/200x400" alt="Advertisement banner with clouds and a green field" class="w-full">
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-3/5 p-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="font-semibold text-lg mb-2">User Reviews</h2>
+                <!-- Repeat this block for each review -->
+                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                    <h3 class="font-semibold">Emily Johnson rated 4.8</h3>
+                    <p>"Just finished *Where the Crawdads Sing* by Delia Owens, and I'm speechless. The storytelling is beautiful, and the twist at the end... wow. Highly recommend this one!"</p>
+                </div>
+                <!-- End of review block -->
+            </div>
+        </div>
+
+        <!-- Right Advertisement and Friends List -->
+        <div class="w-1/5 bg-gray-100 p-4">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="https://placehold.co/200x100" alt="Advertisement banner with sky and hills" class="w-full mb-4">
+            <div class="text-center font-semibold mb-2">Friends</div>
+            <ul class="list-none text-center">
+                <li>Kiara Lohan Ella</li>
+                <li>Janel Laynes</li>
+                <li>Gabriel Ibo</li>
+                <li>Vianne Navida</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
