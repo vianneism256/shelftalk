@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Talk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('fboffice.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    <div class="bg-yellow-500 p-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-black">SHELF TALK</div>
+        <nav class="space-x-4 text-black font-semibold">
+            <a href="home page.html" class="hover:underline">HOME</a>
+            <a href="books.html" class="hover:underline">BOOKS</a>
+            <a href="reviews.html" class="hover:underline">REVIEWS</a>
+            <a href="genres.html" class="hover:underline">GENRES</a>
+            <a href="authors.html" class="hover:underline">AUTHORS</a>
+        </nav>
+        <div class="space-x-4">
+            <a href="contact.html" class="bg-white px-4 py-2 rounded-lg hover:bg-gray-100">CONTACT</a>
+            <a href="aboutus.html" class="bg-white px-4 py-2 rounded-lg hover:bg-gray-100">ABOUT US</a>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mt-12">
+        <h1 class="text-2xl font-bold mb-4">Get in Touch</h1>
+        <p class="mb-6 text-gray-700">
+            We'd love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out.
+        </p>
+        <form>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" 
+                    class="mt-1 block w-full p-2 border rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" 
+                    class="mt-1 block w-full p-2 border rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="inquiry" class="block text-sm font-medium text-gray-700">Inquiry:</label>
+                <select id="inquiry" name="inquiry" 
+                    class="mt-1 block w-full p-2 border rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500" required>
+                    <option value="">Select an option</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="suggestion">Suggestion</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+                <textarea id="message" name="message" rows="4" 
+                    class="mt-1 block w-full p-2 border rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500" required></textarea>
+            </div>
+            <button type="submit" 
+                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
+                Submit
+            </button>
+        </form>
+        <div class="mt-8 text-gray-700">
+            <h2 class="text-lg font-bold">Shelf Talk Office Location:</h2>
+            <p>Unit D, G/F, North Wing Estancia Offices, Capitol Commons, Ortigas Center, Pasig City 1605</p>
+        </div>
+    </div>
+</body>
+</html>
